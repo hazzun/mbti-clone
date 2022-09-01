@@ -6,10 +6,11 @@ const FADEIN = "fadeInClick";
 const FADEOUT = "fadeOutClick";
 const HIDDEN_CLASS = "hidden";
 
-const select = [];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function calResult() {
     //결과를 계산할 배열 생성
+    /*
     const pointArray = [
         { name: 'mouse', value: 0, key: 0 },
         { name: 'cow', value: 0, key: 1 },
@@ -34,7 +35,13 @@ function calResult() {
             }
         }
     }
+    */
 
+    const result = select.indexOf(Math.max(...select)); //...는 전개연산자 ( 모든걸?? )
+    console.log(result);
+    return result;
+
+    /*
     const resultArray = pointArray.sort(function (a, b) {
         if (a.value > b.value) {
             return -1;
@@ -49,6 +56,7 @@ function calResult() {
     console.log(resultArray);
     console.log(resultKey);
     return resultKey;
+    */
 }
 
 function addAnswer(lalala, qIdx, aIdx) {
@@ -69,10 +77,16 @@ function addAnswer(lalala, qIdx, aIdx) {
                 answerBtnAll[i].disabled = true;
                 answerBtnAll[i].style.display = 'none';
             }
-            select[qIdx] = aIdx; //빈 배열의 몇번째 질문에 몇번째 답변이 담기는지 정보 담기
+            const target = qnaList[qIdx].a[aIdx];
+            for (let j = 0; j < target.type.length; j++) {
+                select[target.type[j]]++; //빈 배열의 몇번째 질문에 몇번째 답변이 담기는지 정보 담기
+            }
             qnaShow(++qIdx);
         } else {
-            select[qIdx] = aIdx;
+            const target = qnaList[qIdx].a[aIdx];
+            for (let j = 0; j < target.type.length; j++) {
+                select[target.type[j]]++; //빈 배열의 몇번째 질문에 몇번째 답변이 담기는지 정보 담기
+            }
             console.log(select);
             qna.classList.add(FADEOUT);
             setTimeout(() => {
