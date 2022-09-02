@@ -59,6 +59,24 @@ function calResult() {
     */
 }
 
+function setResult() {
+    let resultIdx = calResult();
+    const resultName = document.querySelector(".result-name");
+    const resultDesc = document.querySelector(".result-desc");
+    const resultImg = document.querySelector("#result-img");
+    // image-3.png
+
+    resultName.innerText = infoList[resultIdx].name;
+    resultDesc.innerText = infoList[resultIdx].desc;
+
+    const resultAnimal = document.createElement("img");
+    resultAnimal.setAttribute("src", `./img/image-${resultIdx}.png`);
+    resultImg.appendChild(resultAnimal);
+
+    const animalImg = document.querySelector("#result-img img");
+    animalImg.classList.add("img-fluid");
+}
+
 function addAnswer(lalala, qIdx, aIdx) {
     const answerbox = document.querySelector(".answerBox");
     const answerButton = document.createElement("button");
@@ -96,8 +114,7 @@ function addAnswer(lalala, qIdx, aIdx) {
                     result.classList.toggle(HIDDEN_CLASS);
                 }, 0)
             }, 0)
-
-            calResult();
+            setResult();
         }
     });
 }
