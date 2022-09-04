@@ -2,6 +2,7 @@
     background-color: whitesmoke;
     border-radius: 20px;
     text-align: center;
+    /* width: 70%; */
 }
 #result-img{
     width: 80%;
@@ -17,6 +18,17 @@
     color: #000000 85%;
 }
 .share-btn:hover{
+    color: #FEE500;
+    background-color: #000000;
+}
+
+.goHome{
+    border-radius: 15px;
+    border: 0px;
+    background-color: #FEE500;
+    color: #000000 85%;
+}
+.goHome:hover{
     color: #FEE500;
     background-color: #000000;
 }
