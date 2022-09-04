@@ -6,3 +6,17 @@
 #result-img{
     width: 80%;
 }
+.replay-btn{
+    border-radius: 15px;
+    background-color: lightgrey;
+}
+.share-btn{
+    border-radius: 15px;
+    border: 0px;
+    background-color: #FEE500;
+    color: #000000 85%;
+}
+.share-btn:hover{
+    color: #FEE500;
+    background-color: #000000;
+}

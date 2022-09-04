@@ -2,11 +2,23 @@ const startBtn = document.querySelector("#main button");
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
+const reBtn = document.querySelector(".replay-btn");
+
 const FADEIN = "fadeInClick";
 const FADEOUT = "fadeOutClick";
 const HIDDEN_CLASS = "hidden";
 
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+function setMain() {
+    setTimeout(() => {
+        main.classList.add(FADEIN);
+        setTimeout(() => {
+            main.classList.toggle(HIDDEN_CLASS);
+            result.classList.toggle(HIDDEN_CLASS);
+        }, 0)
+    }, 0)
+}
 
 function calResult() {
     //결과를 계산할 배열 생성
@@ -156,3 +168,4 @@ function startBtnClick() {
 }
 
 startBtn.addEventListener("click", startBtnClick);
+reBtn.addEventListener("click", setMain);
