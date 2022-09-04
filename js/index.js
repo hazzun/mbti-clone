@@ -8,16 +8,10 @@ const FADEIN = "fadeInClick";
 const FADEOUT = "fadeOutClick";
 const HIDDEN_CLASS = "hidden";
 
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function setMain() {
-    setTimeout(() => {
-        main.classList.add(FADEIN);
-        setTimeout(() => {
-            main.classList.toggle(HIDDEN_CLASS);
-            result.classList.toggle(HIDDEN_CLASS);
-        }, 0)
-    }, 0)
+    location.href = "/index.html";
 }
 
 function calResult() {
@@ -83,6 +77,7 @@ function setResult() {
 
     const resultAnimal = document.createElement("img");
     resultAnimal.setAttribute("src", `./img/image-${resultIdx}.png`);
+    resultAnimal.alt = resultIdx;
     resultImg.appendChild(resultAnimal);
 
     const animalImg = document.querySelector("#result-img img");
