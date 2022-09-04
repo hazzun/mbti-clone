@@ -5,8 +5,8 @@ function setShare() {
     const resultAlt = resultImg.firstElementChild.alt;
     const shareTitle = '내 연애유형과 닮은 동물은  ,,';
     const shareDesc = infoList[resultAlt].name;
-    const shareImage = url + 'img/image-' + resultAlt + '.png';
-    const shareURL = url + 'page/result-' + resultAlt + '.html';
+    const shareImage = `${url}/img/image-${resultAlt}.png`;
+    const shareURL = `${url}/page/result-${resultAlt}.html`;
 
     Kakao.Share.sendDefault({
         objectType: 'feed',
