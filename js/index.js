@@ -89,7 +89,7 @@ function setResult() {
     animalImg.classList.add("img-fluid");
 
     const share = document.querySelector(".share-btn");
-    share.addEventListener("click", kakaoShare);
+    share.addEventListener("click", setShare);
 }
 
 function addAnswer(lalala, qIdx, aIdx) {
