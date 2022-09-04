@@ -87,6 +87,9 @@ function setResult() {
 
     const animalImg = document.querySelector("#result-img img");
     animalImg.classList.add("img-fluid");
+
+    const share = document.querySelector(".share-btn");
+    share.addEventListener("click", kakaoShare);
 }
 
 function addAnswer(lalala, qIdx, aIdx) {

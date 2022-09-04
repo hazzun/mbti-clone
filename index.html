@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="_hazzun">
     <meta name="keywords" content="십이간지 연애유형">
-    <meta name="description" content="열두가지의 동물들과 함께 나의 연애유형을 알아보자">
+    <meta name="description" content="동물로 알아보는 연애유형">
 
     <!-- sns shaer -->
     <meta property="og:url" content="https://lovetypewithanimals.netlify.app" />
@@ -16,8 +16,8 @@
     <meta property="og:description" content="나의 연애유형은 어떤 동물일까?" />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
 
     <title>연애유형 with 열두동물</title>
 
@@ -36,6 +36,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('23177fc369fad0fd0d310228b67b8a9a');
+        Kakao.isInitialized();
+    </script>
 </head>
 
 <body>
@@ -70,6 +76,8 @@
             <button class="share-btn btn mt-3" type="button">공유할래요</button>
         </section>
     </div>
+
+    <script src="./js/share.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
 </body>
