@@ -21,7 +21,7 @@ function setShare() {
         },
         buttons: [
             {
-                title: '결과 확인하기',
+                title: '결과보고 참여하기🧐',
                 link: {
                     mobileWebUrl: shareURL,
                     webUrl: shareURL,
